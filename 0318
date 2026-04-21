@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class 0318 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = input.nextInt();
+
+        if (num <= 0) {
+            System.out.println("Invalid input");
+            return;
+        }
+
+        int[] factors = new int[100];
+        int index = 0;
+
+        for (int i = 1; i <= num; i++)
+            if (num % i == 0)
+                factors[index++] = i;
+
+        for (int i = 0; i < index; i++)
+            System.out.print(factors[i] + " ");
+
+        input.close();
+    }
+}
