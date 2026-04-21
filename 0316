@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class 0316 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double[] heights = new double[11];
+        double sum = 0;
+
+        for (int i = 0; i < heights.length; i++) {
+            System.out.print("Enter height: ");
+            heights[i] = input.nextDouble();
+
+            if (heights[i] <= 0) {
+                System.out.println("Invalid height");
+                return;
+            }
+
+            sum += heights[i];
+        }
+
+        double mean = sum / heights.length;
+
+        System.out.println("Mean Height = " + mean);
+
+        input.close();
+    }
+}
